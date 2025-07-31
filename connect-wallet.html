@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Wallet | Design Birds</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .wallet-section {
+            background: #f8f9fa;
+            min-height: 100vh;
+            padding: 60px 0 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wallet-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(4,49,212,0.08);
+            padding: 40px 32px 32px 32px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .wallet-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0431d4;
+            margin-bottom: 18px;
+        }
+        .wallet-desc {
+            color: #666;
+            font-size: 1.08rem;
+            margin-bottom: 30px;
+        }
+        .wallet-options {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .wallet-option {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #f2f5fc;
+            border-radius: 10px;
+            padding: 14px 18px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .wallet-option.selected, .wallet-option:hover {
+            border-color: #0431d4;
+            background: #e0e7ff;
+        }
+        .wallet-option img {
+            width: 32px;
+            height: 32px;
+        }
+        .wallet-option span {
+            font-size: 1.08rem;
+            font-weight: 500;
+            color: #333;
+        }
+        .connect-btn {
+            width: 100%;
+            background: #0431d4;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 14px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 18px;
+            transition: background 0.2s;
+        }
+        .connect-btn:hover {
+            background: #0328a8;
+        }
+        .wallet-status {
+            min-height: 28px;
+            color: #28a745;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            .wallet-card {
+                padding: 24px 8px 18px 8px;
+            }
+            .wallet-title {
+                font-size: 1.4rem;
+            }
+        }
+        .navbar-menus li a[href="connect-wallet.html"] { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="nav-alert">
+        <span style="color: #0431d4; margin-right: 2px;">Sign up</span>
+        & get one art <span style="color: #0431d4; margin-right: 0px; margin-left: 3px;">Free Download price</span> ,
+        Shop more...
+    </div>
+    <nav id="navbar">
+        <div class="navbar-logo">
+            <span style="color: #0431d4; margin-right: 5px;">Design</span>
+            <span style="color: #ffa3da;">Birds</span>
+        </div>
+        <div class="navbar-menus">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="connect-wallet.html">Connect Wallet</a></li>
+            </ul>
+        </div>
+        <div class="navbar-actions">
+            <div class="search-container">
+                <input type="text" placeholder="Search products..." class="search-input">
+                <i class="fa-solid fa-search search-icon"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <a href="connect-wallet.html" class="connect-wallet">Connect Wallet <i class="fa-solid fa-wallet"></i></a>
+            <i class="fa-solid fa-bars fa-xl mobile-menu"></i>
+        </div>
+    </nav>
+    <section class="wallet-section">
+        <div class="wallet-card">
+            <div class="wallet-title">Connect Your Wallet</div>
+            <div class="wallet-desc">Choose your preferred wallet provider to securely connect and start shopping with crypto.</div>
+            <div class="wallet-options">
+                <div class="wallet-option selected">
+                    <img src="images/metamask.png" alt="MetaMask">
+                    <span>MetaMask</span>
+                </div>
+                <div class="wallet-option">
+                    <img src="images/walletconnect.png" alt="WalletConnect">
+                    <span>WalletConnect</span>
+                </div>
+                <div class="wallet-option">
+                    <img src="images/coinbase.png" alt="Coinbase Wallet">
+                    <span>Coinbase Wallet</span>
+                </div>
+            </div>
+            <button class="connect-btn">Connect Wallet</button>
+            <div class="wallet-status">Ready to connect</div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Design Birds</h3>
+                    <p>Your one-stop destination for trendy fashion and lifestyle products.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#categories">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="connect-wallet.html">Connect Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@designbirds.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> 123 Fashion St, Style City, SC 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Design Birds. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+// Highlight active menu item
+const navLinks = document.querySelectorAll('.navbar-menus ul li a');
+const current = window.location.pathname.split('/').pop() || 'index.html';
+navLinks.forEach(link => {
+  const href = link.getAttribute('href');
+  if (
+    (current === 'index.html' && href.includes('index.html')) ||
+    (current === 'products.html' && href.includes('products.html')) ||
+    (current === 'about.html' && href.includes('about.html')) ||
+    (current === 'contact.html' && href.includes('contact.html')) ||
+    (current === 'cart.html' && href.includes('cart.html')) ||
+    (current === 'product-details.html' && href.includes('product-details.html')) ||
+    (current === 'connect-wallet.html' && href.includes('connect-wallet.html'))
+  ) {
+    link.classList.add('active');
+  }
+});
+// Mobile menu toggle
+const mobileMenu = document.querySelector('.mobile-menu');
+const navbarMenus = document.querySelector('.navbar-menus');
+mobileMenu.addEventListener('click', () => {
+  navbarMenus.classList.toggle('open');
+});
+// Wallet option selection UI
+const walletOptions = document.querySelectorAll('.wallet-option');
+walletOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    walletOptions.forEach(o => o.classList.remove('selected'));
+    option.classList.add('selected');
+  });
+});
+</script>
+</body>
+</html>
