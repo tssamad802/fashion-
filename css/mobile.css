@@ -184,3 +184,19 @@
         font-size: 14px;
     }
 }
+
+@media (max-width: 480px) {
+  .register-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
